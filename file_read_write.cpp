@@ -28,6 +28,7 @@ void registration() {
     cin >> age;
 
     file << id << " " << name << " " << age << endl;
+    afterlogin();
     file.close();
 
 }
