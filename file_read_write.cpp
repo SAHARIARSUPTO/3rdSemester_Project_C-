@@ -17,17 +17,15 @@ int main() {
 
 void registration() {
     string name;
-    int age, id;
+    int id;
     ofstream file;
     file.open("student.txt", ios::out | ios::app);
     cout << "Enter Your Name:";
     cin >> name;
     cout << "Enter your Id:";
     cin >> id;
-    cout << "Enter Your Age:";
-    cin >> age;
 
-    file << id << " " << name << " " << age << endl;
+    file << id << " " << name << " " << endl;
     afterlogin();
     file.close();
 
@@ -35,7 +33,7 @@ void registration() {
 
 void login() {
     string name1, name;
-    int age1, age, id, id1;
+    int age1,id, id1;
     cout << "Enter Your Name:";
     cin >> name1;
     cout << "Enter your Id:";
@@ -44,7 +42,7 @@ void login() {
     while (getline(readFile, name)) {
 
         stringstream ss(name);
-        ss >> id >> name >> age;
+        ss >> id >> name;
         if (name == name1 && id1 == id) {
             cout << "Login successful!" << endl;
             afterlogin();
